@@ -7,7 +7,8 @@ var multer = require('multer'),
   bodyParser = require('body-parser'),
   path = require('path');
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/InstayaDB");
+//mongoose.connect("mongodb://localhost/InstayaDB");
+mongoose.connect('mongodb+srv://root:RealMadrid@cluster0.8s32fv9.mongodb.net/InstayaDB?retryWrites=true&w=majority');
 var fs = require('fs');
 var ordenes = require("./model/ordenes.js");
 var user = require("./model/user.js");

@@ -19,7 +19,7 @@ export default class Register extends React.Component {
 
   register = () => {
 
-    axios.post('http://localhost:2000/register', {
+    axios.post('https://instaya-backend1.herokuapp.com/register', {
       nombre: this.state.nombre,
       cedula: this.state.cedula,
       correo: this.state.correo,

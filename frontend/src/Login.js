@@ -20,7 +20,7 @@ export default class Login extends React.Component {
 
     const pwd = bcrypt.hashSync(this.state.password, salt);
 
-    axios.post('http://localhost:2000/login', {
+    axios.post('https://instaya-backend1.herokuapp.com/login', {
       correo: this.state.correo,
       password: pwd,
     }).then((res) => {

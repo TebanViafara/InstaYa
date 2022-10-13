@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`http://localhost:2000/get-orden${data}`, {
+    axios.get(`https://instaya-backend1.herokuapp.com/get-orden${data}`, {
       headers: {
         'token': this.state.token
       }
@@ -69,7 +69,7 @@ export default class Dashboard extends Component {
   }
 
   deleteOrden = (id) => {
-    axios.post('http://localhost:2000/delete-orden', {
+    axios.post('https://instaya-backend1.herokuapp.com/delete-orden', {
       id: id
     }, {
       headers: {
@@ -122,7 +122,7 @@ export default class Dashboard extends Component {
   crear_orden = () => {
     
 
-    axios.post('http://localhost:2000/crear-orden', {
+    axios.post('https://instaya-backend1.herokuapp.com/crear-orden', {
       fecha: this.state.fecha,
       hora: this.state.hora,
       dimensiones: this.state.dimensiones,
@@ -162,7 +162,7 @@ export default class Dashboard extends Component {
 
   updateOrden = () => {
 
-    axios.post('http://localhost:2000/update-orden', {
+    axios.post('https://instaya-backend1.herokuapp.com/update-orden', {
         id: this.state.id,
         estado: this.state.estado,
         fecha: this.state.fecha,
